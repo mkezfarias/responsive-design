@@ -1,1 +1,54 @@
-media 480 media 1152 media 768
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+}
+
+.nav1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    height: 30%;
+    color: lightgray;
+}
+
+.nav1 li {
+    padding: 0.3rem;
+}
+
+.nav2 {
+    display: flex;
+    background: whitesmoke;
+    height: 45%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav3 {
+    background: yellow;
+    height: 25%;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav2 ul li {
+    padding: 0.3em;
+    border: 1px solid green;
+}
+
+.navlink {}
+
+#last-from-list {
+    justify-self: flex-end;
+}
+
+
+/* media 480 media 1152 media 768 */
