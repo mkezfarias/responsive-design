@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title> TNW </title>
     <link rel="stylesheet" href="styless.css">
+    <script src="https://kit.fontawesome.com/4f5233a2df.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:700|Montserrat|Questrial&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +27,10 @@
                 <li><a href="#" class="navlink">Contact</a></li>
             </ul>
         </div>
-        <div class="navlist nav2">
+        </nav>
+        <div class="sticky">
+         <div class="navlist nav2">
+             <div class="divo1"><img src="assets/tnw.svg" alt="logotop" class="logotop"></div>
             <ul>
                 <li><a href="#" class="navlink">LATEST</a></li>
                 <li><a href="#" class="navlink">HARD FORK</a> </li>
@@ -34,32 +39,44 @@
                 <li><a href="#" class="navlink">WORK 2030</a></li>
 
             </ul>
-            <div> <span>O</span></div>
+            <div><a href="#"><i class="fas fa-search"></i></a> </div>
         </div>
         <div class="navlist nav3">
             <a href="#">
                 <p>Our blockchain fintech and business event this week. Don't miss it -> </p>
             </a>
         </div>
+    </div>
     </nav>
 
     <main>
         <section class="main">
-            <article class="main1">
+            <div class="main1">
+                <img alt="twn logo" class="mainlogo" src="assets/tnw.svg">
+                <p id="date" class="date"></p>
+                    <script>
+                    let n = new Date();
+                    let y = n.getFullYear();
+                    let d = n.getDate();
+                    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                    document.getElementById("date").innerHTML = days[n.getDay()] + " - " + months[n.getMonth()] + " " + d + ", " + y;     
+                    </script>
+                <h4>GEAR</h4>
                 <h1 class="maintitle">
-                    <a href="#" class="mainimg main1">Every new device at Google’s big Pixel 4 event</a>
+                    <a href="#" class="mainimg main11">Every new device at Google’s big Pixel 4 event</a>
                 </h1>
                 <h3>by Napier Lopez | 38 minutes ago | 0 Shares</h3>
-            </article>
+            </div>
             <article class="main2">
                 <h1 class="maintitle">
-                    <a href="#" class="mainimg main1">Every new device at Google’s big Pixel 4 event</a>
+                    <a href="#" class="mainimg main11">Every new device at Google’s big Pixel 4 event</a>
                 </h1>
                 <h3>by Napier Lopez | 38 minutes ago | 0 Shares</h3>
             </article>
             <article class="main3">
                 <h1 class="maintitle">
-                    <a href="#" class="mainimg main1">Every new device at Google’s big Pixel 4 event</a>
+                    <a href="#" class="mainimg main11">Every new device at Google’s big Pixel 4 event</a>
                 </h1>
                 <h3>by Napier Lopez | 38 minutes ago | 0 Shares</h3>
             </article>

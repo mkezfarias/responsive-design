@@ -1,11 +1,113 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+ margin:0;
+ padding:0;
+ border:0;
+ outline:0;
+ font-size:100%;
+ vertical-align:baseline;
+ background:transparent;
+}
+
+body {
+ line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+ display:block;
+}
+
+nav ul {
+ list-style:none;
+}
+
+blockquote, q {
+ quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content:'';
+ content:none;
+}
+
 a {
-    text-decoration: none;
+ margin:0;
+ padding:0;
+ font-size:100%;
+ vertical-align:baseline;
+ background:transparent;
+ text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+ background-color:#ff9;
+ color:#000;
+ text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+ background-color:#ff9;
+ color:#000; 
+ font-style:italic;
+ font-weight:bold;
+}
+
+del {
+ text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+ border-bottom:1px dotted;
+ cursor:help;
+}
+
+table {
+ border-collapse:collapse;
+ border-spacing:0;
+}
+/* change border colour to suit your needs */
+
+hr {
+ display:block;
+ height:1px;
+ border:0; 
+ border-top:1px solid #cccccc;
+ margin:1em 0;
+ padding:0;
+}
+
+input, select {
+ vertical-align:middle;
+}
+
+/******************custom css*************************/ 
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Maven Pro', sans-serif;
+font-family: 'Questrial', sans-serif;
+*/
+
+body {
+    overflow: visible;
 }
 
 nav {
-    display: flex;
-    flex-direction: column;
-    height: 150px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
 }
 
 .nav1 {
@@ -13,25 +115,109 @@ nav {
     justify-content: space-between;
     align-items: center;
     background: black;
-    height: 30%;
+    height: auto;
     color: lightgray;
+    padding: 5px 0 5px 15px;
 }
 
 .nav1 li {
-    padding: 0.3rem;
+    padding: 0.3rem;    
+}
+
+.fa-search {
+    font-size: 18px;
+    color: lightgray;
+    margin-right: 10px;
+}
+
+.nav1 :nth-child(2) {
+    padding-right: .8rem;
+}
+
+.nav1 li a {
+    color: white;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgb(247, 247, 247);
 }
 
 .nav2 {
-    display: flex;
-    background: whitesmoke;
-    height: 45%;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 12fr 1fr;
+    grid-auto-flow: column;
+    background: rgb(247, 247, 247);
+    height: 45px;
+    /*justify-content: space-between;*/
     align-items: center;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    margin-left: 0;
+    }
+
+.divo1:hover {
+    background: url(assets/home-1.gif) no-repeat;
+    background-size: 105px;
+}
+
+    
+.logotop {
+    height: 15px;
+    position: relative;
+    top: 15px;
+}
+
+.nav2 ul {
+    justify-self: start;
+}
+
+.divo1 {
+    width: 105px;
+    background: linear-gradient(to bottom right,#c09,#f42 85%) no-repeat, url(assets/home-1.gif) no-repeat;
+    background-size: 105px;
+}
+
+.nav2 li {    
+    padding: 15px 0 15px 0;
+}
+
+.sticky ul li a:hover {
+    color:black;
+    font-weight: 800;
+}
+
+.nav2 div {
+    border-left: 1px solid lightgray;
+    padding: 0 10px 0 20px;
+    background-color: rgb(247, 247, 247);
+    height: 45px;
+    position: relative;
+}
+
+.nav2 div a {
+    position: relative;
+    top: 15px;
+}
+
+.nav2 li a {
+    color:gray;
+    padding-right: 20px;
 }
 
 .nav3 {
-    background: yellow;
-    height: 25%;
+    background: #fd3;
+    display: flex;
+    padding: 10px 0 10px 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.nav3 > a {
+    color: black;
 }
 
 ul {
@@ -39,16 +225,79 @@ ul {
     list-style: none;
 }
 
-.nav2 ul li {
-    padding: 0.3em;
-    border: 1px solid green;
+.main {
+    display: grid;
+    margin: 2px 10px;
+    gap: 10px;
+    grid-template-columns: minmax(100px,2fr) minmax(50px, 1fr);
+    grid-template-areas: 
+    "big small"
+    "big smaller";
 }
 
-.navlink {}
-
-#last-from-list {
-    justify-self: flex-end;
+.main1:hover, 
+.main2:hover,
+.main3:hover { 
+    filter: alpha(opacity=80);
+    opacity: .8;
+    transition: .3s;
 }
 
 
+@media (max-width:768px) {
+    .main {
+        display: grid;
+        grid-template-areas: 
+        "big"
+        "small"
+        "smaller";
+    }
+}
+
+.main1 {
+    grid-area: big;
+    background: url(assets/image-gradient.png) repeat-x, url(assets/cover-gradient.png) no-repeat, url(assets/main1.png) no-repeat;
+    background-size: contain, 300%, cover;
+    background-position-y: 130px, -700px, top; 
+    height: 72vh; 
+    display: grid;   
+    grid-column: repeat(autofit, minmax(50%, 1fr));
+}
+
+.mainlogo {
+    width: 90%;
+    padding-left: 6%;
+    padding-top: 4%;
+    grid-column: 1;
+    align-self: top;
+    grid-column: 1 / span 2;
+}
+
+.date {
+    display: inline;
+    align-self: flex-start;
+    grid-column: 3;
+    align-self: normal;
+    padding-top: 20px;
+    font-family: 'Questrial', sans-serif;
+    color: white;
+    justify-self: end;
+    padding-right: 10px;
+}
+
+.main2 {
+    grid-area: small;
+    background: url(assets/image-gradient.png), url(assets/main2.jpg);
+    background-size: contain, cover;
+    background-position-y: bottom, top;
+    height: 35vh;
+}
+
+.main3 {
+    grid-area: smaller;
+    background: url(assets/image-gradient.png), url(assets/main3.jpg);
+    background-size: contain, cover;
+    background-position-y: bottom, top;
+    height: 35vh;
+}
 /* media 480 media 1152 media 768 */
