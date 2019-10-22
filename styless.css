@@ -384,7 +384,7 @@ ul {
     padding-left: 40px;
 }
 
-.main1 h1 {
+.main1 h5 {
     font-size: 5vw;
     font-family: 'Questrial', sans-serif;
     color:white;
@@ -393,7 +393,7 @@ ul {
     padding-left: 40px;
 } 
 
-.main1 h1 a {
+.main1 h5 a {
     color:white;
 }
 
@@ -424,9 +424,17 @@ ul {
     padding: 5px 10px;
 }
 
-.main2 h1 a,
-.main3 h1 a {
+
+.main2 h5,
+.main3 h5 {
+    padding: 0 10px;
+}
+
+.main2 h5 a,
+.main3 h5 a {
     color: white;
+    font-size: 2vw;
+    font-family: 'Questrial', sans-serif;
 }
 
 .latestn {
@@ -437,6 +445,7 @@ ul {
 .latestn > h1 {
     margin-left: 95px;
 }
+
 h1,
 .artset-title {
     font-family: 'Questrial', sans-serif;
@@ -481,10 +490,11 @@ h1,
 .latest {
     display: grid;
     max-width: 1100px;
+    grid-template-columns: repeat(autofit, auto);
     margin: auto;
 }
 
-.latest > header{
+.latest > header {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
@@ -574,23 +584,29 @@ h1,
 }
 
 .categories {
-    padding-top: 30px;
+    margin-top: 80px;
 }
 
 .sets {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 80%;
+    column-gap: 20px;
+    row-gap: 80px;
+    margin: auto;
 }
 
 .artset {
-    padding: 30px;
-    margin: 30px;
+    display: grid;
+    grid-gap: 10px;
+    width: 100%;
+    grid-template-rows: 40px 1fr auto 1fr;
 }
 
 .artset > h1 {
     margin-bottom: 20px;
 }
+
 .artset-title1,
 .artset-title2,
 .artset-title3 {
@@ -613,8 +629,7 @@ h1,
 }
 
 .artset-image {
-    height: 276px;
-    width: 368px;
+    height: auto;
     box-sizing: border-box; 
     display: flex;
     flex-direction: column;
@@ -655,8 +670,70 @@ h1,
     background: url(assets/u8.png) no-repeat;
 }
 
+.artset-list > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
+.artset-list > ul > li > a {
+    font-family: 'Montserrat', sans-serif;
+    color: gray;
+    font-size: 12px;
+}
 
+.artset-list > ul > li {
+    border-bottom: solid 1px lightgray;
+    padding: 7px 0;
+    list-style: disc;
+    color: orangered;
+    margin-left: 14px;
+}
+
+.artset-info {
+   /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    */
+    display: grid;
+    height: 90px;
+    width: 100%;
+    background: rgb(255, 239, 233);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: orangered;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.artset-info > img {
+    height: 100%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    justify-self: end;
+}
+
+.artset-info1 { 
+    padding: 4px 0 0 10px;
+    max-width: 80%;
+    text-transform: uppercase;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.artset-info2 {
+    padding-left: 10px;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    padding-bottom: 4px;
+}
+
+.artset-info2 > a {
+    color: orangered;
+    width: auto;
+}
 /* media 480 media 1152 media 768 */
 /*
 font-family: 'Montserrat', sans-serif;
