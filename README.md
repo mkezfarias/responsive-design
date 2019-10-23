@@ -109,7 +109,7 @@ No licenses required as project was developed in educational eviroment.
 
 Luis Puente - [@mkezmkez](https://twitter.com/mkezkmez) - puente.luism@gmail.com
 Currently not partered. Authorized by Student Success to complete project solo (by Willow Mata)
-Project Link: [github.com/mkezmkez/design-teardown](https://github.com/mkezmkez/design-teardown)
+Project Link: [github.com/mkezmkez/responsive-design](https://github.com/mkezmkez/responsive-design)
 
 
 
